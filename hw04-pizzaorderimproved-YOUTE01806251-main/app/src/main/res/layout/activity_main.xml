@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    tools:context=".MainActivity">
+
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="bottom"
+        android:adjustViewBounds="true"
+        android:alpha="0.4"
+        android:contentDescription="@string/pizza"
+        android:scaleType="centerCrop"
+        android:src="@drawable/pizza2" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="434dp"
+        android:layout_height="57dp"
+        android:background="@color/white"
+        android:text="@string/user_Prompt"
+        android:textAlignment="center"
+        android:textColor="@color/teal_700"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editUserPromp"
+        android:layout_width="match_parent"
+        android:layout_height="79dp"
+        android:background="@color/teal_700"
+        android:ems="10"
+        android:fontFamily="serif-monospace"
+        android:hint="@string/user_Prompt2"
+        android:importantForAutofill="no"
+        android:inputType="number"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <TextView
+        android:id="@+id/textHungerLevel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:text="@string/hungerPromt"
+        android:textColor="@color/black"
+        android:textColorHint="@color/white"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editUserPromp" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/teal_700"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textHungerLevel">
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-medium"
+            android:text="@string/hunger1"
+            android:textColor="@color/white"
+            android:textSize="25sp" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-medium"
+            android:text="@string/hunger2"
+            android:textColor="@color/white"
+            android:textSize="25sp" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-medium"
+            android:text="@string/hunger3"
+            android:textColor="@color/white"
+            android:textSize="25sp" />
+
+    </RadioGroup>
+
+    <CheckBox
+        android:id="@+id/checkbox_meat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="onCheckboxClicked"
+        android:textColor="@color/teal_700"
+        android:text="@string/meat"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+
+    <CheckBox
+        android:id="@+id/checkbox_chicken"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="onCheckboxClicked"
+        android:textColor="@color/teal_700"
+        android:text="@string/chicken"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/checkbox_meat"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+
+    <CheckBox
+        android:id="@+id/checkbox_cheese"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="onCheckboxClicked"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:textColor="@color/teal_700"
+        android:text="@string/extra_cheese"
+        app:layout_constraintStart_toEndOf="@+id/checkbox_chicken"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="402dp"
+        android:layout_height="369dp"
+        android:alpha="0.7"
+        android:contentDescription="@string/Thanks"
+        android:src="@drawable/black_image"
+        app:layout_constraintBottom_toTopOf="@+id/SubmitOrderButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline2" />
+
+    <Button
+        android:id="@+id/SubmitOrderButton"
+        android:layout_width="wrap_content"
+        android:layout_height="58dp"
+        android:layout_gravity="center"
+        android:backgroundTint="@color/black"
+        android:text="@string/buttonOder"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.4514364" />
+
+
+    <TextView
+        android:id="@+id/textHungerResult"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/user_Prompt"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline2" />
+
+    <TextView
+        android:id="@+id/textGuestCount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/loading"
+        android:textAlignment="center"
+        android:textColor="@color/teal_700"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textHungerResult" />
+
+    <TextView
+        android:id="@+id/textHungerType"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/User_question"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textGuestCount" />
+
+    <TextView
+        android:id="@+id/textHungerTypeNumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/loading"
+        android:textAlignment="center"
+        android:textColor="@color/teal_700"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textHungerType" />
+
+    <TextView
+        android:id="@+id/textHungerTopping"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/hungerTopings"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textHungerTypeNumber" />
+
+    <TextView
+        android:id="@+id/textHungerToppingNumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/loading"
+        android:textAlignment="center"
+        android:textColor="@color/teal_700"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textHungerTopping" />
+
+    <TextView
+        android:id="@+id/textPizzaNeeded"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/Amount_of_pizza"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textHungerToppingNumber" />
+
+    <TextView
+        android:id="@+id/textPizzaNeededNumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/loading"
+        android:textAlignment="center"
+        android:textColor="@color/teal_700"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textPizzaNeeded" />
+
+    <ImageView
+        android:id="@+id/Transition"
+        android:layout_width="418dp"
+        android:layout_height="734dp"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/Thanks"
+        android:scaleType="centerCrop"
+        android:src="@drawable/black"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/Thankyou"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/Thanks"
+        android:textAlignment="center"
+        android:textColor="@color/teal_700"
+        android:textSize="55sp"
+        android:translationX="0dp"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.86456907" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

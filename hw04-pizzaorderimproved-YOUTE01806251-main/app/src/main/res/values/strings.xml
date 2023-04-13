@@ -1,0 +1,43 @@
+<resources>
+    <string name="app_name">Pizza Calculator</string>
+    <string name="loading">Loading..</string>
+    <string name="newOrder">Start A New Order</string>
+    <string name="Selectionerroe">Make a selection</string>
+    <string name="pizzaConfirmation">Pizza is Odered, Enjoy</string>
+    <string name="user_Prompt">How many guest will attend?</string>
+    <string name="user_Prompt2">enter here</string>
+    <string name="details">Guest amount</string>
+    <string name="hungertype">hunger Level:</string>
+    <string name="calculate">Calculate Pizza:</string>
+    <string name="Amount_of_pizza">pizza needed</string>
+    <string name="error">Please choose hunger level</string>
+    <string name="errorTopping">Please choose a topping</string>
+    <string name="error2">Type here!!</string>
+    <string name="User_question"> How hungry are your guest?</string>
+    <string name="enjoy"> Enjoy Your Pizza!</string>
+    <string name="light">light</string>
+    <string name="Medium">Medium</string>
+    <string name="Ravenous">Ravenous</string>
+    <string name="pizza">Pizza(s)</string>
+    <string name="hungerPromt">How hungry are your guest?</string>
+    <string name="hunger1">light</string>
+    <string name="hunger2">Medium</string>
+    <string name="hunger3">Ravenous</string>
+    <string name="Thanks">Order submitted.</string>
+    <string name="hungerTopings">Choose one topping</string>
+    <string name="buttonOder">Submit Order</string>
+    <string-array name="hungerLevel">
+        <item>How hungry are your guest?</item>
+        <item>light</item>
+        <item>Medium</item>
+        <item>Ravenous</item>
+    </string-array>
+    <string-array name="chosen_Topping">
+        <item>chicken</item>
+        <item>extra cheese</item>
+        <item>meat</item>
+    </string-array>
+        <string name="extra_cheese">extra cheese</string>
+        <string name="chicken">chicken</string>
+        <string name="meat">meat</string>
+</resources>
